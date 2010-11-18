@@ -164,7 +164,7 @@ def img2ascii(filename, map_array=None, blk_siz=2):
         c = map_img_chars(c, map_array)
         write_arr(c, filename, "-arr-", blk_siz)
 
-def transition(file1, file2, map_array, blk_siz=2, n=50):
+def ascii_transition(file1, file2, map_array, blk_siz=2, n=50):
     I = file2gray(file1)
     J = file2gray(file2)
 
@@ -187,14 +187,26 @@ def transition(file1, file2, map_array, blk_siz=2, n=50):
         im_name = os.path.join(".", "output", "%s-%s-%02d.png" %(file1, file2, i))
         im.save(im_name, format="PNG")
 
-        
+def img_transition(file1, file2, map_array, blk_siz=2, n=50):
+    I = file2gray(file1)
+    J = file2gray(file2)
+
+    d = absolute(I - J)
+    steps = linspace(d.min(), d.max(), n+1)
+
+    for i, step in enumerate(steps):
+        K = I * (d>step) + J * (d<step)
+        # do something with K
+        im_name = os.path.join(".", "output", "%s-%s-%02d.png" %(file1, file2, i))
+        imsave(im_name, K, cmap=cm.gray)
+
 if __name__=="__main__":
     # get_images()
     # save_density_stats()
     chr_order = get_density_stats()
     
     chr_list = chr_order[::-10][::-1]
-    print "".join(chr_list)
+    # print "".join(chr_list)
 
     # chr_str = "W#H8wUOx&soIvi=+:| "
     # chr_str = "#8wOxuIi*_ "
@@ -203,7 +215,7 @@ if __name__=="__main__":
     img2ascii('carsten.png', chr_list, 2)
     img2ascii('bastien.png', chr_list, 2)
 
-    transition('carsten.png', 'bastien.png', chr_list)        
+    img_transition('carsten.png', 'bastien.png', chr_list)        
 
 
 
