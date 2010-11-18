@@ -1,1 +1,19 @@
-Added a README for github's sake. 
+From The Collaborative International Dictionary of English v.0.48 [gcide]:
+
+  Omnium-gatherum \Om`ni*um-gath"er*um\, n. [A macaronic compound
+     of L. omnium, gen. pl. of omnis all, and E. gather.]
+     A miscellaneous collection of things or persons; a confused
+     mixture; a medley; a hodgepodge. [Colloq. & Humorous]
+     --Selden.
+  
+     Syn: hotchpotch, odds and ends, farrago, motley collection.
+          [1913 Webster]
+
+From WordNet (r) 3.0 (2006) [wn]:
+
+  omnium-gatherum
+      n 1: a motley assortment of things [syn: {odds and ends},
+           {oddments}, {melange}, {farrago}, {ragbag}, {mishmash},
+           {mingle-mangle}, {hodgepodge}, {hotchpotch}, {gallimaufry},
+           {omnium-gatherum}]
+
