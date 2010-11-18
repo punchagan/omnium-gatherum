@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
-from pylab import imread, imshow, sum, average, array, argsort, show
-from pylab import zeros, linspace, savetxt, digitize, vectorize, absolute
+from pylab import imread, imshow, sum, average, array, argsort, show, imsave
+from pylab import zeros, linspace, savetxt, digitize, vectorize, absolute, cm
 import os
 from scipy import ndimage
 
