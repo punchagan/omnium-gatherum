@@ -4,10 +4,8 @@ weekend hack.  Nothing serious, Really.
 """
 
 from numpy import loadtxt, hstack, ones, zeros, zeros_like
-import pygame
-import pygame.mixer as mix
 
-pygame.init()
+import pygame.mixer as mix
 
 ssp = zeros(3000)
 mix.init(frequency=22050, size=-16, channels=2)
@@ -72,5 +70,5 @@ if __name__ == "__main__":
     t.play()
     running = True
     while running:
-        running = pygame.mixer.get_busy()
+        running = mix.get_busy()
             
