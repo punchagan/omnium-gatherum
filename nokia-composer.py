@@ -6,6 +6,7 @@ weekend hack.  Nothing serious, Really.
 from numpy import loadtxt, hstack, ones, zeros, zeros_like
 import pygame
 import pygame.mixer as mix
+import gtk
 
 pygame.init()
 
@@ -70,4 +71,4 @@ mytune = mytune.split()
 if __name__ == "__main__":
     t = find_tune(mytune)
     t.play()
-    pygame.event.wait()
+    gtk.main()
